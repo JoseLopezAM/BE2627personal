@@ -1,0 +1,53 @@
+import time 
+#mission status light controller 
+
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+RED = "\033[91m"
+RESET = "\033[0m"
+
+def show_light(color, message):
+    """Display the current light color and statues."""
+    print("\n" + "=" * 35)
+
+    if color == "GREEN":
+        print(f"{GREEN}     GREEN LIGHT{RESET}")
+    elif color == "YELLOW":
+        print(f"{YELLOW}     YELLOW LIGHT{RESET}")
+    elif color == "OFF":
+        print("     LIGHT OFF")
+    elif color == "RED":
+        print(f"{RED}     RED LIGHT{RESET}")
+
+    print(f"  Status: {message}")
+    print("=" * 35)
+
+
+Def mission_light() :
+    print("\nChoose an action:")
+    print("1. Acticate system (Green)")
+    print("2. Prepare for mission (Yellow)")
+    print("3. Start mission (Green)")
+    print("5. Exit")
+
+    choice = input("\nEnter your choice (1-5): ")
+
+    if choice == "1":
+        show_light("GREEN", "System activated and ready.")
+
+    elif choice == "2":
+        show_light("YELLOW", "Warning! Mission starting soon.")
+
+    elif choice == "3":
+        show_light("GREEN", "Mission completed siccessfully!")
+
+    elif choice == "5":
+        print("Mission light system shutting down.")
+        break
+
+    elif:
+        print("Invalid choice. Please enter a number from 1 to 5.")
+
+
+if __name__ == "__main__":
+    mission_light()
